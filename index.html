@@ -73,13 +73,29 @@
             padding: 10px;
         }
 
+        .ctnFlex {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .container .box {
-            width: 100%;
+            width: 45%;
             padding: 50px;
             background: #fff;
             margin-top: 50px;
             border-radius: 10px;
             box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+            float: left;
+        }
+
+        .container .boxright {
+            width: 45%;
+            padding: 50px;
+            background: #fff;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+            float: right;
         }
     </style>
 </head>
@@ -112,45 +128,60 @@
     <!--main area-->
 
     <div class="container">
-        <div class="box">
-            <p>
-                O <b>A</b>stronomy <b>P</b>icture <b>O</b>f the <b>D</b>ay (<b>APOD</b>, em
-                português: Imagem Astronômica do Dia) é uma base de dados com fotos e vídeos mantido
-                pela NASA e pela Universidade Tecnológica de Michigan. De acordo com o website oficial,
-                <i>'cada dia uma imagem diferente do universo é mostrada, com uma curta explicação escrita
-                    por um astrônomo profissional'</i>.
-            </p>
-        </div>
+        <div class="ctnFlex">
+            <div class="box">
+                <h2>APOD - O que é isso?</h2><br>
+                <img class="lado" src="images/page_help.png" alt="APOD">
+                <br><br>
+                <p>
+                    O <b>A</b>stronomy <b>P</b>icture <b>O</b>f the <b>D</b>ay (<b>APOD</b>, em
+                    português: Imagem Astronômica do Dia) é uma base de dados com fotos e vídeos mantido
+                    pela NASA e pela Universidade Tecnológica de Michigan. De acordo com o website oficial,
+                    <i>"cada dia uma imagem diferente do universo é mostrada, com uma curta explicação escrita
+                        por um astrônomo profissional"</i>.
+                </p>
+            </div>
 
-        <div class="box">
-            <p>
-                Pressione o botão <span style='background-color: rgb(255, 69, 0); 
-    color: rgb(255, 255, 255);'>&nbspBuscar&nbsp;</b></span> após entrar
-                com a <b><u>data inicial</u></b> e a <b><u>data final</u></b> no padrão solicitado.<br>
-                Se os dois campos estiverem vazios será mostrado o <b>APOD</b> da data atual. Se entrar
-                só com a <b><u>data inicial</u></b> será listado os <b>APOD</b> desta data até a data atual.
-                Se entrar só com a <b><u>data final</u></b>, será mostrado somente o <b>APOD</b>
-                desta data.
-            </p>
+            <div class="boxright">
+                <h2>Entrada de Dados</h2><br>
+                <img class="lado" src="images/page_edados.png" alt="APOD">
+                <br><br>
+                <p>
+                    Pressione o botão <span style='background-color: rgb(255, 69, 0); 
+                color: rgb(255, 255, 255);'>&nbspBuscar&nbsp;</b></span> após entrar
+                    com a <b><u>data inicial</u></b> e a <b><u>data final</u></b> no padrão solicitado.
+                    Se os dois campos estiverem vazios será mostrado o <b>APOD</b> da data atual. Se entrar
+                    só com a <b><u>data inicial</u></b> será listado os <b>APOD</b> desta data até a data atual.
+                    Se entrar só com a <b><u>data final</u></b>, será mostrado somente o <b>APOD</b>
+                    desta data.
+                </p>
+            </div>
         </div>
+        <div class="ctnFlex">
+            <div class="box">
+                <h2>APOD Encontradas</h2><br>
+                <img class="lado" src="images/page_list_apod.png" alt="APOD">
+                <br><br>
+                <p>
+                    Tela que mostra uma lista de <b>APOD</b> em função das datas de entrada, com as
+                    imagens e seus respectivos títulos e datas destribuidos em quadros envolvidos por uma
+                    moldura <span style='color: rgb(255, 69, 0);'><b>laranja</b></span>. Caso seja um vídeo,
+                    o quadro terá uma moldura <span style='color: rgb(0, 127, 255);'><b>azul</b></span>
+                    envolvendo a data de publicação e o título do <b>APOD</b>.
+                </p>
+            </div>
 
-        <div class="box">
-            <p>
-                Tela que mostra uma lista de <b>APOD</b> em função das datas de entrada, com as
-                imagens e seus respectivos títulos e datas destribuidos em quadros envolvidos por uma
-                moldura <span style='color: rgb(255, 69, 0);'><b>laranja</b></span>. Caso seja um vídeo,
-                o quadro terá uma moldura <span style='color: rgb(0, 127, 255);'><b>azul</b></span>
-                envolvendo a data de publicação e o título do <b>APOD</b>.
-            </p>
-        </div>
-
-        <div class="box">
-            <p>
-                Tela onde é explicado, de forma resumida, o fenômeno astronômico mostrado
-                no <b>APOD</b>.<br> Na parte inferior da tela um botão flutuante permite a tradução
-                do texto descritivo usando o <b><i>Google Translator</i></b>. Sendo um vídeo,
-                temos mais um botão flutuante que faz a reprodução via <b><i>YouTube</i></b>.
-            </p>
+            <div class="boxright">
+                <h2>Página Detalhe</h2><br>
+                <img class="lado" src="images/page_detalhes.png" alt="APOD">
+                <br><br>
+                <p>
+                    Tela onde é explicado, de forma resumida, o fenômeno astronômico mostrado
+                    no <b>APOD</b>.<br> Na parte inferior da tela um botão flutuante permite a tradução
+                    do texto descritivo usando o <b><i>Google Translator</i></b>. Sendo um vídeo,
+                    temos mais um botão flutuante que faz a reprodução via <b><i>YouTube</i></b>.
+                </p>
+            </div>
         </div>
     </div>
 
