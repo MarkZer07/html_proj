@@ -1,139 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <title>App APOD View Project</title>
-
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #eee;
-            font-family: sans-serif;
-        }
-
-        .banner-area {
-            width: 100%;
-            height: 100vh;
-            /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(back-img.jpg);*/
-            background-image: url(bg_image0.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
-        }
-
-        .content-area {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .content h1 {
-            font-size: 80px;
-            color: #fff;
-        }
-
-        .content p {
-            font-size: 30px;
-            color: #ddd;
-        }
-
-        .content .btn {
-            border: none;
-            outline: none;
-            padding: 15px;
-            margin-top: 100px;
-            border-radius: 4px;
-            color: #eee;
-            font-size: 18px;
-            cursor: pointer;
-            background: #222;
-            /*
-            <a href="mailto:amarq.exp@gmail.com?
-            Subject=Título%20da%20mensagem">Enviar email</a>
-            */
-            /*<a href="mailto:amarq.exp@gmail.com?subject=App Apod View">amarq.exp@gmail.com</a>*/
-        }
-
-        /* main area */
-
-        .container {
-            width: 70%;
-            margin: 50px auto;
-            padding: 10px;
-        }
-
-        .ctnFlex {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .container .box {
-            width: 45%;
-            padding: 50px;
-            background: #fff;
-            margin-top: 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
-            float: left;
-        }
-
-        .container .boxright {
-            width: 45%;
-            padding: 50px;
-            background: #fff;
-            margin-top: 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
-            float: right;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo com CSS3</title>
+    <!--
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 0px)" href="small.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px)" href="medium.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1350px)" href="large.css"/>
+    -->
+    <link rel="stylesheet" type="text/css" href="estilos/style.css" />
 </head>
 
 <body>
-    <!--
-    <script>
-        document.getElementById('sendmail').addEventListener('click', function (event) {
-            event.preventDefault();
-            document.location.href = 'mailto:amarq.exp@gmail.com';
-        });
-    -->
-    </script>
-    <div class="banner-area">
-        <div class="content-area">
-            <div class="content">
-                <h1>APOD VIEW</h1>
-
-                <p>App APOD View Project</p><br>
-
-                <!--<button class="btn" id="sendmail">Contact</button>-->
-                <!--<button id="sendmail">Contact</button>-->
-                <!--<a href="index.html"><img src="images/email_icon.png" alt="Contact"></a>-->
-                <a href="mailto:amarq.exp@gmail.com"><img src="images/email_icon.png" alt="Contact"></a>
-            </div>
-        </div>
+    <div class="cabecalho">
+        <img src="images/bg_image.jpg" alt="APOD VIEW">
+        <h1>APOD VIEW</h1>
+        <h2>App APOD View Project</h2>
+        <a href="mailto:amarq.exp@gmail.com"><img src="images/email_icon.png" alt="Contact"></a>
     </div>
 
-
-    <!--main area-->
-
-    <div class="container">
-        <div class="ctnFlex">
+    <main class="pages">
+        <article>
             <div class="box">
                 <h2>APOD - O que é isso?</h2><br>
                 <img class="lado" src="images/page_help.png" alt="APOD">
                 <br><br>
-                <p>
+                <p class="ajuda">
                     O <b>A</b>stronomy <b>P</b>icture <b>O</b>f the <b>D</b>ay (<b>APOD</b>, em
                     português: Imagem Astronômica do Dia) é uma base de dados com fotos e vídeos mantido
                     pela NASA e pela Universidade Tecnológica de Michigan. De acordo com o website oficial,
@@ -141,28 +36,31 @@
                         por um astrônomo profissional"</i>.
                 </p>
             </div>
+        </article>
 
-            <div class="boxright">
+        <article>
+            <div class="box">
                 <h2>Entrada de Dados</h2><br>
                 <img class="lado" src="images/page_edados.png" alt="APOD">
                 <br><br>
-                <p>
+                <p class="ajuda">
                     Pressione o botão <span style='background-color: rgb(255, 69, 0); 
-                color: rgb(255, 255, 255);'>&nbspBuscar&nbsp;</b></span> após entrar
-                    com a <b><u>data inicial</u></b> e a <b><u>data final</u></b> no padrão solicitado.
+            color: rgb(255, 255, 255);'>&nbspBuscar&nbsp;</b></span> após entrar
+                    com a <b><u>data inicial</u></b> e a <b><u>data final</u></b> no padrão solicitado.<br>
                     Se os dois campos estiverem vazios será mostrado o <b>APOD</b> da data atual. Se entrar
                     só com a <b><u>data inicial</u></b> será listado os <b>APOD</b> desta data até a data atual.
                     Se entrar só com a <b><u>data final</u></b>, será mostrado somente o <b>APOD</b>
                     desta data.
                 </p>
             </div>
-        </div>
-        <div class="ctnFlex">
+        </article>
+
+        <article>
             <div class="box">
                 <h2>APOD Encontradas</h2><br>
                 <img class="lado" src="images/page_list_apod.png" alt="APOD">
                 <br><br>
-                <p>
+                <p class="ajuda">
                     Tela que mostra uma lista de <b>APOD</b> em função das datas de entrada, com as
                     imagens e seus respectivos títulos e datas destribuidos em quadros envolvidos por uma
                     moldura <span style='color: rgb(255, 69, 0);'><b>laranja</b></span>. Caso seja um vídeo,
@@ -170,22 +68,24 @@
                     envolvendo a data de publicação e o título do <b>APOD</b>.
                 </p>
             </div>
+        </article>
 
-            <div class="boxright">
+        <article>
+            <div class="box">
                 <h2>Página Detalhe</h2><br>
                 <img class="lado" src="images/page_detalhes.png" alt="APOD">
                 <br><br>
-                <p>
+                <p class="ajuda">
                     Tela onde é explicado, de forma resumida, o fenômeno astronômico mostrado
-                    no <b>APOD</b>.<br> Na parte inferior da tela um botão flutuante permite a tradução
+                    no <b>APOD</b>. Na parte inferior da tela um botão flutuante permite a tradução
                     do texto descritivo usando o <b><i>Google Translator</i></b>. Sendo um vídeo,
                     temos mais um botão flutuante que faz a reprodução via <b><i>YouTube</i></b>.
                 </p>
             </div>
-        </div>
-    </div>
+        </article>
+
+    </main>
 
 </body>
-<script src="js/myscript.js"></script>
 
 </html>

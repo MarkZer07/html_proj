@@ -1,44 +1,407 @@
+/* Documento CSS */
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-    /*background-color: rgb(204, 157, 248);*/
-    height: 100%;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    background: #eee;
+  }
+
+.cabecalho {
+    position: relative;
+    width: 100%;
     margin: 0;
+    height: 600px;
+   background-color: #ff2244;
 }
 
-/*
-.bg{
-    background-image: url("bg_image0.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.cabecalho > img {
+    width: 100%;
+    height: 100%;
 }
-*/
 
-h2 {
+.cabecalho > h1 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  color: #fff;
+  font-size: 64px;
+}
+
+.cabecalho > h2 {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 48%;
+  color: rgb(183, 183, 183);
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .cabecalho {
+    background-color: #a1a1a1;
+}
+
+.cabecalho > h1 {
+    font-size: 24px;
+    top: calc(50% - 3px);
+    left: calc(50% - 45px);
+}
+
+.cabecalho > h2 {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    top: calc(55% - 5px);
+    left: calc(50% - 46px);
+    color: rgb(183, 183, 183);
+  }
+
+  .cabecalho > a {
+    display: block;
+    position: absolute;
+    top: calc(60% - 5px);
+    left: calc(64% - 75px);
+  }
+
+  .pages {
+    /*max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;*/
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .pages article {
+    margin: 10px 0;
+
+    /*float: left;*/
+    /*width: calc(50% - 50px);*/
+  }
+
+  /*
+  .pages article:nth-child(even) {
+    margin-left: 10px;
+  }
+  */
+  
+  .pages article img {
+    max-width: 100%;
+  }
+  
+  .pages article h2 {
     font-size: 1.5em;
-    color: rgb(58, 0, 112);
+    font-weight: bold;
+    /*color: #686868;*/
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .pages .ajuda {
+    padding: 0 2px;
+    font-size: 16px;
+    /*background-color: #127d00;*/
+    color: #686868;
+    text-align: justify;
+    text-decoration: none;
+  }
+  
+  .box {
+    width: 80%;
+    padding: 20px;
+    background: #fff;
+    /*margin-top: 50px;*/
+
+    margin: 20px 20px 10px 20px; /* superior  direito  inferior  esquerdo */
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+    /*float: left;*/
+  }
+
 }
 
-img.lado {
-    float: right;
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    .cabecalho {
+    background-color: #15c5c5;
+    }
+
+    .cabecalho > h1 {
+      font-size: 34px;
+      top: calc(50% - 5px);
+      left: calc(50% - 85px);
+    }
+
+    .cabecalho > h2 {
+      display: block;
+      position: absolute;
+      font-size: 14px;
+      top: calc(56% - 5px);
+      left: calc(50% - 70px);
+      color: rgb(183, 183, 183);
+    }
+
+    .cabecalho > a {
+      display: block;
+      position: absolute;
+      top: calc(62% - 5px);
+      left: calc(55% - 65px);
+    }
+
+    .pages {
+      /*max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 15px;
+      text-align: center;*/
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+    }
+    
+    .pages article {
+      margin: 10px 0;
+  
+      float: left;
+      width: calc(50% - 50px);
+    }
+  
+    .pages article:nth-child(even) {
+      margin-left: 10px;
+    }
+    
+    .pages article img {
+      max-width: 100%;
+    }
+    
+    .pages article h2 {
+      font-size: 1.5em;
+      font-weight: bold;
+      /*color: #686868;*/
+      color: black;
+      margin-bottom: 10px;
+    }
+    
+    .pages .ajuda {
+      padding: 0 2px;
+      font-size: 16px;
+      /*background-color: #127d00;*/
+      color: #686868;
+      text-align: justify;
+      text-decoration: none;
+    }
+    
+    .box {
+      width: 70%;
+      padding: 30px;
+      background: #fff;
+      /*margin-top: 50px;*/
+  
+      margin: 30px 50px 30px 50px; /* superior  direito  inferior  esquerdo */
+  
+      border-radius: 10px;
+      box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+      float: left;
+    }
+
 }
 
-main {
-    /*
-    background-color: white;
-    width: 500px;
-    margin: auto;
-    padding: 10px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
-    */
-    background-image: url("bg_image0.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+@media screen and (min-width: 1001px) and (max-width: 1600px) {
+    .cabecalho {
+    background-color: #066152;
+    }
+
+    .cabecalho > h1 {
+        font-size: 48px;
+        top: calc(45% - 10px);
+        left: calc(55% - 160px);
+    }
+
+    .cabecalho > h2 {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        top: calc(54% - 5px);
+        left: calc(50% - 80px);
+        color: rgb(183, 183, 183);
+    }
+
+  .cabecalho > a {
+    display: block;
+    position: absolute;
+    top: calc(62% - 5px);
+    left: calc(55% - 60px);
+  }
+
+  .pages {
+    /*max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;*/
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .pages article {
+    margin: 30px 0;
+
+    
+    float: left;
+    width: calc(50% - 10px);
+  }
+
+  .imoveis article:nth-child(even) {
+    margin-left: 20px;
+  }
+
+  /*
+  .pages article:nth-child(1) {
+    margin-left: 20px;
+  }
+  
+  .pages article:nth-child(2) {
+    margin-left: -80px;
+  }
+
+  .pages article:nth-child(3) {
+    margin-left: -480px;
+  }
+  
+  .pages article:nth-child(4) {
+    margin-left: -100px;
+  }
+  */
+
+  .pages article img {
+    max-width: 100%;
+  }
+  
+  .pages article h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    /*color: #686868;*/
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .pages .ajuda {
+    padding: 0 2px;
+    font-size: 16px;
+    /*background-color: #127d00;*/
+    color: #686868;
+    text-align: justify;
+    text-decoration: none;
+  }
+  
+  .box {
+    width: 70%;
+    padding: 50px;
+    background: #fff;
+    /*margin-top: 50px;*/
+
+    margin: 30px 30px 30px 35px; /* superior(50px)  direito(30px)  inferior(50px)  esquerdo(120px) */
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+    /*float: left;*/
+  }
+
 }
+
+@media screen and (min-width: 1601px) and (max-width: 2000px) {
+    .cabecalho {
+    background-color: #066152;
+    }
+
+    .cabecalho > h1 {
+        font-size: 64px;
+        top: calc(45% - 10px);
+        left: calc(52% - 175px);
+    }
+
+    .cabecalho > h2 {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        top: calc(56% - 5px);
+        left: calc(50% - 70px);
+        color: rgb(183, 183, 183);
+    }
+
+  .cabecalho > a {
+    display: block;
+    position: absolute;
+    top: calc(63% - 5px);
+    left: calc(55% - 80px);
+  }
+
+
+  .pages {
+    /*max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;*/
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .pages article {
+    /*margin: 30px 0;*/
+
+    float: left;
+    width: calc(50% - 50px);
+  }
+
+  .pages article:nth-child(even) {
+    margin-left: -200px;
+  }
+  
+  .pages article img {
+    max-width: 100%;
+  }
+  
+  .pages article h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    /*color: #686868;*/
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .pages .ajuda {
+    padding: 0 2px;
+    font-size: 16px;
+    /*background-color: #127d00;*/
+    color: #686868;
+    text-align: justify;
+    text-decoration: none;
+  }
+  
+  .box {
+    width: 50%;
+    padding: 50px;
+    background: #fff;
+    /*margin-top: 50px;*/
+
+    margin: 50px 30px 50px 320px; /* superior  direito  inferior  esquerdo */
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+    float: left;
+  }
+
+
+}
+
